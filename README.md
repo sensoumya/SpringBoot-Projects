@@ -13,7 +13,3 @@ This project is a Spring Boot application that demonstrates the implementation o
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to add or modify sections based on your project's specific needs. Additionally, you might want to include information about API documentation, troubleshooting, or any other relevant details depending on the complexity of your application.
