@@ -1,0 +1,1 @@
+Spring boot application using Apache Kafka. The application has two microservices and use Kafka as a messaging system to exchange messages between microservices and stores data in Postgresql database.
