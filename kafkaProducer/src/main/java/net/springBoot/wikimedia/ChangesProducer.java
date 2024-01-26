@@ -24,10 +24,10 @@ public class ChangesProducer {
         String topic = "wikimedia_recentchange";
         //read real time data from wiki media
         EventHandler eventHandler = new ChangesHandler(kafkaTemplate, topic);
-        String url = "https://stream.wikimedia.org/v2/stream/recentchange";
+        String url = "https://stream.wikimedia.org/v2/stream/eventgate-main.test.event";
         EventSource.Builder builder = new EventSource.Builder(eventHandler, URI.create(url));
         EventSource eventSource = builder.build();
         eventSource.start();
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(120);
     }
 }

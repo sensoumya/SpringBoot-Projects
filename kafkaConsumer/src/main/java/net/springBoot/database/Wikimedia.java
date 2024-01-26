@@ -2,17 +2,31 @@ package net.springBoot.database;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Table(name = "wiki_recentchange")
+@Table(name = "wiki_events")
 @Getter
-@Setter
 public class Wikimedia {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
-    @Lob
-    private String eventData;
+    @Column(name = "request_id")
+    private String requestId;
+
+    @Column
+    private String topic;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column
+    private String timestamp;
+
+    public Wikimedia() {
+    }
+
+    public Wikimedia(String id, String requestId, String topic, String timestamp) {
+        this.id = id;
+        this.requestId = requestId;
+        this.topic = topic;
+        this.timestamp = timestamp;
+    }
 }
