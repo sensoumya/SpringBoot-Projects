@@ -2,7 +2,13 @@
 
 ### Overview
 
-This project is a Spring Boot application that demonstrates the implementation of a microservices architecture using Apache Kafka as the messaging system. The application consists of two microservices that communicate with each other through Kafka topics and persist data in a PostgreSQL database.
+This project is a Spring Boot application that demonstrates the implementation of a microservices architecture using 
+Apache Kafka as the messaging system. The application monitors wikimedia in real-time and stores changes into database, 
+which can then be utilised for analytical purposes. The application consists of two microservices, one is responsible 
+for monitoring the changes, the other is responsible for processing the data, storing it to the database and exposing 
+apis to access the stored data. Both microservices communicate with each other through Kafka Broker. 
+
+![Alt Text](./images/Flow.png)
 
 ### Technologies Used
 
